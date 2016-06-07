@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :admin_only, :except => :show
-  
+  layout "users"
 
   def index
     @users = User.all
