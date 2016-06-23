@@ -1,26 +1,11 @@
-Skills and Services: 
-Web Application Development, User Experience Design, Development Operations, Product Research, Design and Development, Process Innovation, Customer Acquisition, Collaborative Strategies, Internal Technology Review and Evaluation, Innovation Thinking, Open Thinking
-The Project: 
-Delivery of technology-enabled utilities that support and cultivate an internal impact culture: clear data-driven processes, reduced administrative burden and increased intellectual capacity, greater reach both geographically and digitally, and accelerated brand equity as a leading emerging-markets focused venture capital fund.
-Develop a minimum of one and a maximum of three open source technologies that support the internal deal sourcing, due diligence, and capital raising initiatives.
-OpenProspect 1.0 beta (“MVP”)
-The MVP should facilitate the most critical aspects of:
-All deal sourcing initiatives
-Investor solicitation profile creation and diligence
-Advisor profile creation and diligence
-Company profile creation, information gathering and diligence
-Internal investment review and status
-Networking and relationship building within the VestedWorld community
-Browsing of VestedWorld companies, advisors and investors
-Research, recommend, and implement open process technologies and methodologies that enable a rapid, transparent, and efficient investment review process.
-Optional: The co-authorship of internally and externally-focused content that captures insights for greater internal application and increased brand equity (white papers, thought pieces, best practices reviews, case studies, podcasts, videos, etc.)
 
+##1.0 Beta MVP Release Schedule:
 
-
-1.0 Beta MVP Release Schedule:
 Clear project milestones and development sprints outlined in the Github Repository within 24 hour of contract execution
 All milestones will be populated with development and design “issues” that represent all task that need to be completed respective to that particular design or development focus.
-10-day Release Sprint
+
+##10-day Release Sprint
+
 0.0: User Authentication (email, password)
 0.1: Social Authentication (LinkedIn)
 0.2: User models (users, advisors, investors, founders, management, admins)
@@ -32,25 +17,8 @@ All milestones will be populated with development and design “issues” that r
 0.8: Browse pages (view all advisors, investors, founders)
 0.9: Status updates, notification
 0.10: Emails
-Monitoring and Collaboration:
+
+##Monitoring and Collaboration:
+
 Github will be used for version control, code hosting, and team collaboration.
 Github accounts will be created for relevant of Vested World management or leadership to facilitate an inclusive, transparent, and open working relationship:
-Receive real-time email notifications when new project issues are opened or existing project issues are  closed.
-Add, propose, close or comment on any design and development task, milestone sprints, or aspect of project development.
-View design and development activity (timestamped, with dashboards) and have access to  weekly contributions to the project repository.
-Efficiently receive and respond to important and timely timeline project questions, considerations and clarification requests. 
-Team Communication:
-Two 20-minute weekly meetings to confirm, clarify, and challenge project assumptions
-Slack will be used to facilitate any intraday rapid-fire conversations
-Voice or Google Video Chat or Skype will be used to facilitate more involved team discussions
-Workflow and Delivery:
-Code pushes every 24-hours for the first 10 days of project initiation
-Thereafter; Development code pushes every 48-hours, and production code pushes every week
-
-Review and Approvals:
-Weekly: Email recaps of technical and qualitative developments and deliverables
-Weekly: Internal review and approvals of recently completed project deliverables and accountability to respective project deadlines
-Monthly: Comprehensive collaborative performance review
-Other Contributions: 
-Monitor and present open source and collaborative economic frameworks that are, like VestedWorld, increasing access to capital and strategic support for economic transformation throughout the emerging markets.
-Share insightful and impactful open innovation resources with entrepreneurs, advisors and investors that are committed to economic and social equity.
