@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @investment.title %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @investment.size %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @investment.description %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @investment.type %>
+</p>
+
+<p>
+  <strong>Revenue share:</strong>
+  <%= @investment.revenue_share %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @investment.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @investment.end_date %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @investment.company_id %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @investment.industry %>
+</p>
+
+<p>
+  <strong>Stage:</strong>
+  <%= @investment.stage %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @investment.location %>
+</p>
+
+<p>
+  <strong>Expected return:</strong>
+  <%= @investment.expected_return %>
+</p>
+
+<%= link_to 'Edit', edit_investment_path(@investment) %> |
+<%= link_to 'Back', investments_path %>

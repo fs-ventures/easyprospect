@@ -11,7 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140828012915) do
+ActiveRecord::Schema.define(version: 20160627100000) do
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "name"
+    t.string   "logo"
+    t.string   "motto"
+    t.string   "founded"
+    t.integer  "seeking"
+    t.integer  "raised"
+    t.string   "tag"
+    t.string   "industry"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "investments", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "size"
+    t.text     "description"
+    t.integer  "type"
+    t.integer  "revenue_share"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "company_id"
+    t.string   "industry"
+    t.string   "stage"
+    t.string   "location"
+    t.integer  "expected_return"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

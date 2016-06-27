@@ -1,0 +1,125 @@
+<div class="page-content">
+  <header class="page-content-header">
+    <div class="container-fluid">
+      <div class="tbl">
+        <div class="tbl-row">
+          <div class="tbl-cell">
+            <h3>Companies <small class="text-muted m-l"><%= Company.count %></small></h3>
+          </div>
+          <div class="tbl-cell tbl-cell-action">
+            <%= link_to 'New Company', new_company_path, class: "btn btn-rounded" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header><!--.page-content-header-->  
+
+  <div class="container">
+    <div class="row">
+      <% @companies.each do |company| %>
+        <div class="col-md-4">
+          <%= link_to company do %>
+            <section class="box-typical">
+              <div class="profile-card">
+                <div class="profile-card-photo img-rounded">
+                  <img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" alt="" class="img-rounded"/>
+                </div>
+                <div class="profile-card-name h4 no-margin"><%= company.name %></div>
+                <div class="profile-card-status"><%= company.industry %></div>
+                <div class="profile-card-location small">
+                  Quick elevtor pitch or longer company description to be included here to help intrigue investors and make...
+                </div>
+                <button type="button" class="btn btn-rounded">Follow</button>
+                <div class="btn-group">
+                  <button type="button"
+                      class="btn btn-rounded btn-primary-outline dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                    Learn More
+                  </button>
+                  <div class="dropdown-menu">
+                    <a x href="#"></a>
+                    <a class="dropdown-item" href="#"></a>
+                    <a class="dropdown-item" href="#"></a>
+                  </div>
+                </div>
+              </div><!--.profile-card-->
+
+              <div class="profile-statistic tbl">
+                <div class="tbl-row">
+                  <div class="tbl-cell">
+                    <b>4</b>
+                    Founders
+                  </div>
+                  <div class="tbl-cell">
+                    <b>Pre-MVP</b>
+                    Stage
+                  </div>
+                </div>
+              </div>
+
+              <ul class="profile-links-list">
+                <li>
+                  <%= link_to edit_company_path(company) do %>
+                    <i class="font-icon font-icon-cogwheel"></i>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to company, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                    <i class="font-icon font-icon-trash"></i>
+                  <% end %>
+                </li>
+              </ul>
+            </section><!--.box-typical-->
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div><!--.container-fluid-->
+</div><!--.page-content-->
+
+
+
+
+<p id="notice"><%= notice %></p>
+<!-- 
+<h1>Listing Companies</h1>
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Logo</th>
+    <th>Motto</th>
+    <th>Founded</th>
+    <th>Seeking</th>
+    <th>Raised</th>
+    <th>Tag</th>
+    <th>Industry</th>
+    <th colspan="3"></th>
+  </tr>
+</thead>
+
+<tbody>
+  <% @companies.each do |company| %>
+    <tr>
+      <td><%= company.name %></td>
+      <td><%= company.logo %></td>
+      <td><%= company.motto %></td>
+      <td><%= company.founded %></td>
+      <td><%= company.seeking %></td>
+      <td><%= company.raised %></td>
+      <td><%= company.tag %></td>
+      <td><%= company.industry %></td>
+      <td><%= link_to 'Show', company %></td>
+      <td><%= link_to 'Edit', edit_company_path(company) %></td>
+      <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table> -->
+
+<br>
+
+

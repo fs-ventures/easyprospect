@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  resources :investments
+  resources :companies
   root to: 'visitors#index'
   devise_for :users
   resources :users
+
+  get "/signup/:page" => "pages#show"
+  get "/pages/:page" => "pages#show"
+
 end

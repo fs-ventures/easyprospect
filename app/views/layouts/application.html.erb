@@ -20,10 +20,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
+  <body class="with-side-menu">
     <header>
-      <%= render 'layouts/header' %>
+    <%= render 'layouts/header' %>
     </header>
+    <%= render 'layouts/user_nav_left' %>
 
     <main role="main">
        <%= render 'layouts/messages' %>

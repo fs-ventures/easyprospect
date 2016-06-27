@@ -1,39 +1,51 @@
+<body style="background: url(http://vestedworld.com/app/uploads/2016/03/3-1600x870.jpg); background-size: cover;">
+
 <div class="page-center">
   <div class="page-center-in">
     <div class="container-fluid">
       <div class="authform">
-        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form',  :class => "sign-box "}) do |f| %>
+        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form',  :class => "sign-box no-padding"}) do |f| %>
           <%= devise_error_messages! %>
-          <div class="sign-avatar">
-              <%= image_tag("avatar-sign.png") %>
+          
+           <div class="signup-header padding-20 bgcolor-light-grey">
+            <header class="sign-title no-margin">
+              <h3 class="no-margin">Welcome Back</h3>
+              <h5 class="text-muted no-margin">Takes just a few minutes.</h5>
+            </header>
           </div>
-          <header class="sign-title">Sign In</header>
-
-          <div class="form-group">
-            <%= f.email_field :email, :autofocus => true, class: 'form-control' %>
-          </div>
-          <div class="form-group">
-            <%= f.password_field :password, class: 'form-control' %>
-          </div>
-          <div class="form-group">
-            <div class="checkbox float-left">
-              <% if devise_mapping.rememberable? -%>
-                <%= f.check_box :remember_me %>
-                 <label for="signed-in">Keep me signed in</label>
-              <% end -%>
+          <hr class="no-margin"/>
+          <div class="padding-20">
+            <div class="form-group">
+              <%= f.email_field :email, :autofocus => true, class: 'form-control' %>
             </div>
-            <div class="float-right reset">
-              <%- if devise_mapping.recoverable? %>
-                <%= link_to "Forgot password?", new_password_path(resource_name) %>
-              <% end -%>
+            <div class="form-group">
+              <%= f.password_field :password, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <div class="checkbox float-left">
+                <% if devise_mapping.rememberable? -%>
+                  <%= f.check_box :remember_me %>
+                   <label for="signed-in">Keep me signed in</label>
+                <% end -%>
+              </div>
+              <div class="float-right reset">
+                <%- if devise_mapping.recoverable? %>
+                  <%= link_to "Forgot password?", new_password_path(resource_name) %>
+                <% end -%>
+              </div>
             </div>
           </div>
-          <%= f.submit 'Sign in', :class => 'btn btn-rounded' %>
-          <p class="sign-note">New to our website? 
-            <%- if devise_mapping.registerable? %>
-              <%= link_to 'Sign up', new_registration_path(resource_name), class: 'right'  %>
-            <% end -%>
-          </p>
+          <div class="signup-footer padding-20 bgcolor-light-grey">
+            <%= f.submit 'Login to my Account', :class => 'btn btn-rounded btn-block' %>
+          </div>
+          <hr class="no-margin"/>
+          <div class="signup-footer padding-20 bgcolor-light-grey">
+            <p class="sign-note no-margin">New to our website? 
+              <%- if devise_mapping.registerable? %>
+                <%= link_to 'Sign up', new_registration_path(resource_name), class: 'right'  %>
+              <% end -%>
+            </p>
+          </div>
         <% end %>
       </div>
     </div>

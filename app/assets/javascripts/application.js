@@ -18,8 +18,11 @@
 //= require js/lib/tether/tether.min.js
 //= require js/lib/bootstrap/bootstrap.min.js
 //= require js/plugins.js
-
+//= require js/lib/jquery-tag-editor/jquery.caret.min
+//= require js/lib/jquery-tag-editor/jquery.tag-editor.min
 //= require js/lib/bootstrap-select/bootstrap-select.min
+//= require js/lib/select2/select2.full.min
+
 
 //= require js/lib/html-sortable/html.sortable.js
 
@@ -29,8 +32,9 @@ $(document).ready(function(){
 	});
 });
 
+$(function() {
+      $('#tags-editor-textarea').tagEditor();
+    })
+();
+
 //= require js/app.js
-
-
-
-	

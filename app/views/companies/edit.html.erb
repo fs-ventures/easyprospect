@@ -1,2 +1,226 @@
-<h1>Companies#edit</h1>
-<p>Find me in app/views/companies/edit.html.erb</p>
+<div class="page-content">
+  <div class="profile-header-photo" style="background: url(http://www.mobiusmotors.com/stories/images/banner_benson.jpg);">
+    <div class="profile-header-photo-in">
+      <div class="tbl-cell">
+        <div class="info-block">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-9 col-xl-offset-3 col-lg-8 col-lg-offset-4 col-md-offset-0">
+                <div class="tbl info-tbl">
+                  <div class="tbl-row">
+                    <div class="tbl-cell">
+                      <p class="title">Mobius Motors</p>
+                      <p>Automotive Manufacturing</p>
+                    </div>
+                    <div class="tbl-cell tbl-cell-stat">
+                      <div class="inline-block">
+                        <p class="title">23</p>
+                        <p>Followers</p>
+                      </div>
+                    </div>
+                    <div class="tbl-cell tbl-cell-stat">
+                      <div class="inline-block">
+                        <p class="title">8</p>
+                        <p>Photos</p>
+                      </div>
+                    </div>
+                    <div class="tbl-cell tbl-cell-stat">
+                      <div class="inline-block">
+                        <p class="title">2</p>
+                        <p>Videos</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="change-cover">
+      <i class="font-icon font-icon-picture-double"></i>
+      Change cover
+      <input type="file"/>
+    </button>
+  </div><!--.profile-header-photo-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-4">
+        <aside class="profile-side">
+          <section class="box-typical profile-side-user">
+            <button type="button" class="avatar-preview avatar-preview-128">
+              <%= image_tag("http://nationsservice.wdfiles.com/local--files/file:mobiuslogo/mobiuslogo.jpg")%>
+              <span class="update">
+                <i class="font-icon font-icon-picture-double"></i>
+                Update photo
+              </span>
+              <input type="file"/>
+            </button>
+            <button type="button" class="btn btn-rounded">Send a Message</button>
+            <div class="btn-group">
+              <button type="button"
+                      class="btn btn-rounded btn-primary-outline dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                Follow
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#"><span class="font-icon font-icon-money"></span>I want to invest</a>
+                <a class="dropdown-item" href="#"><span class="font-icon font-icon-bookmark-o"></span>Send me updates</a>
+                <a class="dropdown-item" href="#"><span class="font-icon font-icon-connectdevelop"></span>I want to work with this company</a>
+                <a class="dropdown-item" href="#"><span class="font-icon font-icon-product-hunt"></span>I love the product</a>
+                <a class="dropdown-item" href="#"><span class="font-icon font-icon-industry"></span>I like this industry</a>
+              </div>
+            </div>
+            <div class="bottom-txt">Ranking: 15 out of 246</div>
+          </section>
+
+          <section class="box-typical profile-side-stat">
+            <div class="tbl">
+              <div class="tbl-row">
+                <div class="tbl-cell">
+                  <span class="number">4</span>
+                  Founders
+                </div>
+                <div class="tbl-cell">
+                  <span class="number">Pre-MVP</span>
+                  Stage
+                </div>
+              </div>
+            </div>
+          </section>
+
+            <section class="box-typical">
+            <header class="box-typical-header-sm bordered">Company Overview</header>
+            <div class="box-typical-inner">
+              <p class="line-with-icon">
+                <i class="font-icon font-icon-calend"></i>
+                Joined 8 month ago
+              </p>
+              <p class="line-with-icon">
+                <i class="font-icon font-icon-pin-2"></i>
+                Nairobi, Kenya<br/>
+                <small class="text-muted">Corporate Headquarters</small>
+              </p>
+              <p class="line-with-icon">
+                <i class="font-icon font-icon-users-two"></i>
+                Joel Jackson<br/> 
+                <small class="text-muted">Founder and CEO</small>
+              </p>
+              <p class="line-with-icon">
+                <i class="font-icon font-icon-earth"></i>
+                <a href="http://www.mobiusmotors.com/">Company Website</a>
+              </p>              
+              <p class="line-with-icon">
+                <i class="font-icon font-icon-case-3"></i>
+                <%= @company.industry %>
+              </p>
+            </div>
+          </section>
+        </aside><!--.profile-side-->
+      </div>
+
+      <div class="col-xl-9 col-lg-8">
+        <section class="tabs-section">
+          <div class="tabs-section-nav tabs-section-nav-left">
+            <ul class="nav" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link" href="#activity" role="tab" data-toggle="tab">
+                  <span class="nav-link-in">Corporate Overview</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#about" role="tab" data-toggle="tab">
+                  <span class="nav-link-in">About</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#financials" role="tab" data-toggle="tab">
+                  <span class="nav-link-in">Financials</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team" role="tab" data-toggle="tab">
+                  <span class="nav-link-in">Team</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#dataroom" role="tab" data-toggle="tab">
+                  <span class="nav-link-in">Data Room</span>
+                </a>
+              </li>
+            </ul>
+          </div><!--.tabs-section-nav-->
+
+          <div class="tab-content no-styled profile-tabs">
+            
+
+
+
+
+            <!-- corporate activity -->
+            <div role="tabpanel" class="tab-pane" id="activity">
+              <section class="box-typical box-typical-padding p-b">
+              	<br/>
+              	<h4 class="text-primary">Our Vision</h4>
+              	<textarea class="form-control text-left" rows="8">Mobius Motors designs, manufactures and sells durable, affordable vehicles for Africa's mass market. We are reimagining the car; designing our vehicles around common road terrain, transport usage and consumer income profiles across the region.We are not just building vehicles more suited to local demand, but transport platforms that empower local entrepreneurs to run profitable transportation businesses with Mobius vehicles to end-users in their communities. The range of businesses is vast, from public transport, to mobile medical care, to goods delivery - transforming Africa's transport network.
+              	</textarea>
+
+                
+
+                <br/>
+                <h4 class="text-primary">The Problem</h4>
+                <textarea class="form-control text-left" rows="8">The majority of roads in rural and peri-urban areas of sub-saharan Africa are degraded. Roads are often cracked and riddled with potholes. Rural roads in particular are invariably uneven, sandy/rocky tracks; making transportation difficult and ultimately restricting mobility. The most common vehicles across regions like East Africa are imported from more developed countries such as Japan, UAE and India. These vehicles are designed for areas with good road infrastructure - they are not built for an African environment. High import duties also make these vehicles relatively expensive. Beyond high purchase prices, running a car in countries like Kenya is also expensive. High maintenance costs as a result of bad roads and inappropriate vehicles have continued to push the cost of owning a car up, locking out entry-level buyers, particularly entrepreneurs who require cost-effective vehicles in order to successfully operate their businesses.
+              	</textarea>
+
+                <br/>
+                <h4 class="text-primary">Our Solution</h4>
+                 <textarea class="form-control text-left" rows="8">To serve the African mass market, we have built a car around the needs of local consumers. Our vehicles have the key functionality and durability of an off-road car, fit for travelling and carrying goods for long distances on bumpy dirt roads. The price is similar to a seven year old sedan vehicle, which is not designed to operate on degraded terrain reliably, nor carry the heavier loads common among consumers in these areas.Mobius aims to empower transport entrepreneurs across Africa not just with more appropriate vehicles, but with the financing and business advice needed to operate a sustainable transport business. We are building a platform for mobility.
+              	</textarea>
+              </section><!--.box-typical-->
+
+              <br/><br/>
+
+            </div><!--.tab-pane-->
+
+            <!-- about-->
+            <div role="tabpanel" class="tab-pane active fade in" id="about">
+              <section class="box-typical box-typical-padding">
+                <br/>
+                <%= render 'form' %>
+              </section>
+            </div><!--.tab-pane-->
+
+            <!-- Financials-->
+            <div role="tabpanel" class="tab-pane" id="team">
+              <section class="box-typical box-typical-padding">
+                Team
+              </section>
+            </div><!--.tab-pane-->
+
+            <!-- Financials-->
+            <div role="tabpanel" class="tab-pane" id="financials">
+              <section class="box-typical box-typical-padding">
+                Financials
+              </section>
+            </div><!--.tab-pane-->
+
+
+            <!-- Financials-->
+            <div role="tabpanel" class="tab-pane" id="dataroom">
+              <section class="box-typical box-typical-padding">
+                Data Room
+              </section>
+            </div><!--.tab-pane-->
+
+
+
+          </div><!--.tab-content-->
+        </section><!--.tabs-section-->
+      </div>
+    </div><!--.row-->
+  </div><!--.container-fluid-->
+</div><!--.page-content-->
