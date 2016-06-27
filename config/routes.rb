@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
-  get "/signup/:page" => "pages#show"
-  get "/pages/:page" => "pages#show"
+  get "/network" => "users#network"
 
 end

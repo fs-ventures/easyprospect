@@ -1,64 +1,258 @@
-<p id="notice"><%= notice %></p>
+<div class="page-content">
+  <div class="profile-header-photo" style="background: url(http://vestedworld.com/app/uploads/2016/03/3-1024x529.jpg);">
+    <div class="profile-header-photo-in">
+      <div class="tbl-cell">
+        <div class="info-block">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-9 col-xl-offset-3 col-lg-8 col-lg-offset-4 col-md-offset-0">
+                <div class="tbl info-tbl">
+                  <div class="tbl-row">
+                    <div class="tbl-cell">
+                      <p class="title"><%= @investment.title %></p>
+                      <p>$<%= @investment.size %></p>
+                    </div>
+                    <div class="tbl-cell tbl-cell-stat">
+                      <div class="inline-block">
+                        <p class="title">23</p>
+                        <p>Followers</p>
+                      </div>
+                    </div>
+                    <div class="tbl-cell tbl-cell-stat">
+                      <div class="inline-block">
+                        <p class="title">8</p>
+                        <p>Photos</p>
+                      </div>
+                    </div>
+                    <div class="tbl-cell tbl-cell-stat">
+                      <div class="inline-block">
+                        <p class="title">2</p>
+                        <p>Videos</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="change-cover">
+      <i class="font-icon font-icon-picture-double"></i>
+      Change cover
+      <input type="file"/>
+    </button>
+  </div><!--.profile-header-photo-->
 
-<p>
-  <strong>Title:</strong>
-  <%= @investment.title %>
-</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-4">
+        <aside class="profile-side">
+          <section class="box-typical profile-side-user">
+            <button type="button" class="avatar-preview avatar-preview-128">
+              <%= image_tag("http://nationsservice.wdfiles.com/local--files/file:mobiuslogo/mobiuslogo.jpg")%>
+              <span class="update">
+                <i class="font-icon font-icon-picture-double"></i>
+                Update photo
+              </span>
+              <input type="file"/>
+            </button>
+            <button type="button" class="btn btn-rounded">Follow</button>
+            <div class="btn-group">
+              <button type="button"
+                      class="btn btn-rounded btn-primary-outline dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                Learn More
+              </button>
+              <div class="dropdown-menu">
+               
+              </div>
+            </div>
+            <div class="bottom-txt">[Placeholder]</div>
+          </section>
 
-<p>
-  <strong>Size:</strong>
-  <%= @investment.size %>
-</p>
+          <section class="box-typical profile-side-stat">
+            <div class="tbl">
+              <div class="tbl-row">
+                <div class="tbl-cell">
+                  <span class="number"><%= @investment.size %></span>
+                  Amount
+                </div>
+                <div class="tbl-cell">
+                  <span class="number">Pre-MVP</span>
+                  Stage
+                </div>
+              </div>
+            </div>
+          </section>
 
-<p>
-  <strong>Description:</strong>
-  <%= @investment.description %>
-</p>
+            <section class="box-typical">
+            <header class="box-typical-header-sm bordered">Info</header>
+            <div class="box-typical-inner">
+              <p class="line-with-icon">
+                <i class="font-icon font-icon-calend"></i>
+                Joined 8 month ago
+              </p>
+              <p class="line-with-icon">
+                <i class="font-icon font-icon-pin-2"></i>
+                Nairobi, Kenya<br/>
+                <small class="text-muted">Corporate Headquarters</small>
+              </p>
+              <p class="line-with-icon">
+                <i class="font-icon font-icon-users-two"></i>
+                Joel Jackson<br/> 
+                <small class="text-muted">Founder and CEO</small>
+              </p>
+              <p class="line-with-icon">
+                <i class="font-icon font-icon-earth"></i>
+                <a href="http://www.mobiusmotors.com/">Company Website</a>
+              </p>              
+              <p class="line-with-icon">
+                <i class="font-icon font-icon-case-3"></i>
+                <%= @investment.description %>
+              </p>
+            </div>
+          </section>
+        </aside><!--.profile-side-->
+      </div>
 
-<p>
-  <strong>Type:</strong>
-  <%= @investment.type %>
-</p>
+      <div class="col-xl-9 col-lg-8">
+        <section class="tabs-section">
+          <div class="tabs-section-nav tabs-section-nav-left">
+            <ul class="nav" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" href="#about" role="tab" data-toggle="tab">
+                  <span class="nav-link-in">About</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#financials" role="tab" data-toggle="tab">
+                  <span class="nav-link-in">Financials</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team" role="tab" data-toggle="tab">
+                  <span class="nav-link-in">Team</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#dataroom" role="tab" data-toggle="tab">
+                  <span class="nav-link-in">Data Room</span>
+                </a>
+              </li>
+            </ul>
+          </div><!--.tabs-section-nav-->
 
-<p>
-  <strong>Revenue share:</strong>
-  <%= @investment.revenue_share %>
-</p>
+          <div class="tab-content no-styled profile-tabs">
 
-<p>
-  <strong>Start date:</strong>
-  <%= @investment.start_date %>
-</p>
+            <!-- about-->
+            <div role="tabpanel" class="tab-pane active fade in" id="about">
+              <section class="box-typical box-typical-padding">
+                
+                <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>End date:</strong>
-  <%= @investment.end_date %>
-</p>
+                <p>
+                  <strong>Title:</strong>
+                  <%= @investment.title %>
+                </p>
 
-<p>
-  <strong>Company:</strong>
-  <%= @investment.company_id %>
-</p>
+                <p>
+                  <strong>Size:</strong>
+                  <%= @investment.size %>
+                </p>
 
-<p>
-  <strong>Industry:</strong>
-  <%= @investment.industry %>
-</p>
+                <p>
+                  <strong>Description:</strong>
+                  <%= @investment.description %>
+                </p>
 
-<p>
-  <strong>Stage:</strong>
-  <%= @investment.stage %>
-</p>
+                <p>
+                  <strong>Type:</strong>
+                  <%= @investment.type %>
+                </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @investment.location %>
-</p>
+                <p>
+                  <strong>Revenue share:</strong>
+                  <%= @investment.revenue_share %>
+                </p>
 
-<p>
-  <strong>Expected return:</strong>
-  <%= @investment.expected_return %>
-</p>
+                <p>
+                  <strong>Start date:</strong>
+                  <%= @investment.start_date %>
+                </p>
 
-<%= link_to 'Edit', edit_investment_path(@investment) %> |
-<%= link_to 'Back', investments_path %>
+                <p>
+                  <strong>End date:</strong>
+                  <%= @investment.end_date %>
+                </p>
+
+                <p>
+                  <strong>Company:</strong>
+                  <%= @investment.company_id %>
+                </p>
+
+                <p>
+                  <strong>Industry:</strong>
+                  <%= @investment.industry %>
+                </p>
+
+                <p>
+                  <strong>Stage:</strong>
+                  <%= @investment.stage %>
+                </p>
+
+                <p>
+                  <strong>Location:</strong>
+                  <%= @investment.location %>
+                </p>
+
+                <p>
+                  <strong>Expected return:</strong>
+                  <%= @investment.expected_return %>
+                </p>
+
+                <%= link_to 'Edit', edit_investment_path(@investment) %> |
+                <%= link_to 'Back', investments_path %>
+
+              </section>
+            </div><!--.tab-pane-->
+
+            <!-- Financials-->
+            <div role="tabpanel" class="tab-pane" id="team">
+              <section class="box-typical box-typical-padding">
+                Team
+              </section>
+            </div><!--.tab-pane-->
+
+            <!-- Financials-->
+            <div role="tabpanel" class="tab-pane" id="financials">
+              <section class="box-typical box-typical-padding">
+                Financials
+              </section>
+            </div><!--.tab-pane-->
+
+
+            <!-- Financials-->
+            <div role="tabpanel" class="tab-pane" id="dataroom">
+              <section class="box-typical box-typical-padding">
+                Data Room
+              </section>
+            </div><!--.tab-pane-->
+
+
+
+          </div><!--.tab-content-->
+        </section><!--.tabs-section-->
+      </div>
+    </div><!--.row-->
+  </div><!--.container-fluid-->
+</div><!--.page-content-->
+
+<%#= link_to 'Edit', edit_company_path(@company) %> |
+<%#= link_to 'Back', companies_path %>
+
+
+
