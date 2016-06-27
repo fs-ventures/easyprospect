@@ -5,7 +5,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    render layout: "minimal"
   end
 
   def show
@@ -42,6 +41,10 @@ class UsersController < ApplicationController
 
   def secure_params
     params.require(:user).permit(:role)
+  end
+
+  def network
+    @users = User.all
   end
 
 end
