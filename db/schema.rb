@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160702190716) do
+ActiveRecord::Schema.define(version: 20160702192915) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20160702190716) do
     t.integer  "raised"
     t.string   "tag"
     t.string   "industry"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "amount_raised"
     t.string   "no_of_employees"
     t.string   "no_of_founders"
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20160702190716) do
     t.string   "twitter"
     t.string   "linkedin"
     t.string   "angellist"
+    t.string   "country_of_incorporation"
+    t.string   "growth_projections"
   end
 
   create_table "investments", force: :cascade do |t|

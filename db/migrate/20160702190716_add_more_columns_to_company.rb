@@ -11,5 +11,6 @@ class AddMoreColumnsToCompany < ActiveRecord::Migration
     add_column :companies, :twitter, :string
     add_column :companies, :linkedin, :string
     add_column :companies, :angellist, :string
+    add_column :companies, :country_of_incorporation, :string
   end
 end

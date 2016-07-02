@@ -1,1 +1,1 @@
-rails g migration AddMoreColumnsToCompany amount_raised:integer, no_of_employees:string, no_of_founders:string, fundraising_amount:string, company_website:string, description:text, readiness:text, projections:text, facebook:string, twitter:string, linkedin:string, angellist:string
+rails g migration add_growth_projections_to_company growth_projections:string no_of_founders:string fundraising_amount:string company_website:string description:text readiness:text projections:text facebook:string twitter:string linkedin:string angellist:string
