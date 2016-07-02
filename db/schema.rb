@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160702072008) do
+ActiveRecord::Schema.define(version: 20160702190716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,33 +19,26 @@ ActiveRecord::Schema.define(version: 20160702072008) do
   create_table "companies", force: :cascade do |t|
     t.string   "name"
     t.string   "logo"
-    t.string   "tagline"
-    t.string   "year_founded"
-    t.string   "funding_amount"
-    t.string   "amount_raised"
+    t.string   "motto"
+    t.string   "founded"
+    t.integer  "seeking"
+    t.integer  "raised"
+    t.string   "tag"
     t.string   "industry"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "amount_raised"
+    t.string   "no_of_employees"
+    t.string   "no_of_founders"
+    t.string   "fundraising_amount"
     t.string   "company_website"
-    t.string   "incorporation_country"
-
-    t.string   "description"
-    t.string   "readiness"
-    t.string   "projections"
-
-    t.string   "linkedin"
-    t.string   "twitter"
+    t.text     "description"
+    t.text     "readiness"
+    t.text     "projections"
     t.string   "facebook"
-
-    t.string   "media"
-
-    t.text    "about"
-    t.text    "problem"
-    t.text    "solution"
-    t.text    "impact"
-
-
+    t.string   "twitter"
+    t.string   "linkedin"
+    t.string   "angellist"
   end
 
   create_table "investments", force: :cascade do |t|
