@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   end
 
   def secure_params
-    params.require(:user).permit(:name, :email, :password, :role, :type)
+    params.require(:user).permit(:name, :email, :password, :role, :profile)
   end
 
   def network
