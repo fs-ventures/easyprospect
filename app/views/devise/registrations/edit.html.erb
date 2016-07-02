@@ -38,11 +38,11 @@
         </div>
       </div>
     </div>
-    <button type="button" class="change-cover">
-      <i class="font-icon font-icon-picture-double"></i>
-      Change cover
-      <input type="file"/>
-    </button>
+    <% if user_signed_in? %>
+      <%= link_to user_registration_path, type: "button", class: "change-cover" do %>
+        <i class="font-icon font-icon"></i>View Profile
+      <% end %>
+    <% end %>
   </div><!--.profile-header-photo-->
 
   <div class="container">

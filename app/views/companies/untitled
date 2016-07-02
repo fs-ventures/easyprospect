@@ -1,0 +1,1 @@
+rails g migration add_impact_to_company impact:text 
