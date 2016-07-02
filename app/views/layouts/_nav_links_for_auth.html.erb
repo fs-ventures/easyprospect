@@ -7,8 +7,10 @@
 <% end %>
 <% else %>
 
+<div class="dropdown-divider"></div>
+
 <%= link_to new_user_session_path, class: "dropdown-item" do %>
-	<span class="font-icon glyphicon glyphicon-user"></span>Login
+	<span class="font-icon glyphicon glyphicon-logout"></span>Login
 <% end %>
 
 <%= link_to new_user_registration_path, class: "dropdown-item" do %>
