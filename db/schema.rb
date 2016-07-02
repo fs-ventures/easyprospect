@@ -19,14 +19,33 @@ ActiveRecord::Schema.define(version: 20160702072008) do
   create_table "companies", force: :cascade do |t|
     t.string   "name"
     t.string   "logo"
-    t.string   "motto"
-    t.string   "founded"
-    t.integer  "seeking"
-    t.integer  "raised"
-    t.string   "tag"
+    t.string   "tagline"
+    t.string   "year_founded"
+    t.string   "funding_amount"
+    t.string   "amount_raised"
     t.string   "industry"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
+    t.string   "company_website"
+    t.string   "incorporation_country"
+
+    t.string   "description"
+    t.string   "readiness"
+    t.string   "projections"
+
+    t.string   "linkedin"
+    t.string   "twitter"
+    t.string   "facebook"
+
+    t.string   "media"
+
+    t.text    "about"
+    t.text    "problem"
+    t.text    "solution"
+    t.text    "impact"
+
+
   end
 
   create_table "investments", force: :cascade do |t|
