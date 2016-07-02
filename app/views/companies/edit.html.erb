@@ -38,11 +38,10 @@
         </div>
       </div>
     </div>
-    <button type="button" class="change-cover">
-      <i class="font-icon font-icon-picture-double"></i>
-      Change cover
-      <input type="file"/>
-    </button>
+    <%= link_to company_path, type: "button", class: "change-cover" do %>
+      <i class="font-icon "></i>
+      View Company Profile
+    <% end %>
   </div><!--.profile-header-photo-->
 
   <div class="container">

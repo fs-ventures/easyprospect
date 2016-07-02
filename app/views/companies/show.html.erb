@@ -50,7 +50,7 @@
         <aside class="profile-side">
           <section class="box-typical profile-side-user">
             <button type="button" class="avatar-preview avatar-preview-128">
-              <%= image_tag("http://nationsservice.wdfiles.com/local--files/file:mobiuslogo/mobiuslogo.jpg")%>
+              <%= image_tag("vw-logos/symbol_blue.png")%>
               <span class="update">
                 <i class="font-icon font-icon-picture-double"></i>
                 Update photo
@@ -81,7 +81,7 @@
                   Followers
                 </div>
                 <div class="tbl-cell">
-                  <span class="number">Pre-MVP</span>
+                  <span class="number"><%= @company.product_stage %></span>
                   Stage
                 </div>
               </div>
@@ -93,21 +93,21 @@
             <div class="box-typical-inner">
               <p class="line-with-icon">
                 <i class="font-icon font-icon-calend"></i>
-                Joined 8 month ago
+                Joined [timestamp]
               </p>
               <p class="line-with-icon">
                 <i class="font-icon font-icon-pin-2"></i>
-                Nairobi, Kenya<br/>
+                [Add]<br/>
                 <small class="text-muted">Corporate Headquarters</small>
               </p>
               <p class="line-with-icon">
                 <i class="font-icon font-icon-users-two"></i>
-                Joel Jackson<br/> 
+                [Add]<br/> 
                 <small class="text-muted">Founder and CEO</small>
               </p>
               <p class="line-with-icon">
                 <i class="font-icon font-icon-earth"></i>
-                <a href="http://www.mobiusmotors.com/">Company Website</a>
+                <a href="<%= @company.company_website %>">Company Website</a>
               </p>              
               <p class="line-with-icon">
                 <i class="font-icon font-icon-case-3"></i>
