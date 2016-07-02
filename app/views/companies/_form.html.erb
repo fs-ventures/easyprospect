@@ -1,4 +1,5 @@
 <%= form_for(@company) do |f| %>
+  
   <% if @company.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
@@ -18,25 +19,21 @@
       <%= f.text_field :name, class: 'form-control', placeholder: "Company Name" %>
     </div>
     <div class="col-md-6">
-      <label class="form-label">Industry</label>
-      <%= f.select(:industry,[  ['Aerospace & Defense', 'Aerospace & Defense'], ['Agriculture', 'Agriculture'], ['Automotive', 'Automotive'], ['Chemicals', 'Chemicals'], ['Construction', 'Construction'], ['Consumer Goods & Services', 'Consumer Goods & Services'], ['Electric Power Industry', 'Electric Power Industry'], ['Agriculture', 'Agriculture'], ['Energy Industry', 'Energy Industry'], ['Financial Services', 'Financial Services'], ['Firearms & Explosives', 'Firearms & Explosives'], ['Food & Beverage', 'Food & Beverage'], ['Health Care', 'Health Care'], ['Housing & Real Estate', 'Housing & Real Estate'], ['Manufacturing', 'Manufacturing'], ['Mining & Drilling', 'Mining & Drilling'], ['Nuclear Power Industry', 'Nuclear Power Industry'], ['Oil and Gas Industry', 'Oil and Gas Industry'], ['Pharmaceuticals & Biotechnology', 'Pharmaceuticals & Biotechnology'], ['Printing & Publishing', 'Printing & Publishing'], ['Telecommunications & Media', 'Telecommunications & Media'], ['Transportation & Logistics', 'Transportation & Logistics']])%>
+      
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-md-4">
+    <div class="col-md-3">
       <label class="form-label">No. of Founders</label>
-      <%= f.text_field :no_of_founders, class: 'form-control', placeholder: "Company Name" %>
+      <%= f.text_field :no_of_founders, class: 'form-control', placeholder: "" %>
     </div>
     <div class="col-md-3">
       <label class="form-label">No. of Employees</label>
-      <%= f.text_field :no_of_employees, class: 'form-control', placeholder: "Company Name" %>
+      <%= f.text_field :no_of_employees, class: 'form-control', placeholder: "" %>
     </div>
     <div class="col-md-4">
       <label class="form-label">Geographic Area</label>
-      <%= select_tag(:geography, options_for_select([['Sub-Saharan Africa', 1], ['East Asia & Pacific', 2], ['Europe, Middle East, & North Africa', 3], ['Latin America & the Caribbean', 4], ['South Asia', 5], ['Global', 6]]), class: "form-contol col-md-12" )%>
-    </div>
-    <div class="col-md-4">
-      <%= select_tag(:product_stage, options_for_select([['Pre-MVP', 1], ['MVP In-Development', 2], ['Post MVP', 3], ['Post Validation & Traction', 4], ['South Asia', 5], ['Global', 6]]), class: "form-contol col-md-12" )%>
+       <%= f.select(:geography,[  ['Sub-Saharan Africa', 'Sub-Saharan Africa'], ['East Asia & Pacific', 'East Asia & Pacific'], ['Europe, Middle East, & North Africa', 'Europe, Middle East, & North Africa'], ['Latin America & the Caribbean', 'Latin America & the Caribbean'], ['South Asia', 'South Asia'], ['Global','Global']])%>
     </div>
   </div>
   <div class="form-group">
@@ -46,7 +43,7 @@
   <div class="form-group row">
     <div class="col-md-5">
       <label class="form-label">Country of Incorporation</label>
-      <%= f.text_field :country_of_incorporation, class: 'form-control', placeholder: "Website" %>
+      <%= f.text_field :country_of_incorporation, class: 'form-control', placeholder: "" %>
     </div>
   </div>
 
@@ -56,12 +53,29 @@
   <h4 class="bold">Company Overview</h4>
 
   <div class="form-group row">
+    <div class="col-md-5">
+      <label class="form-label">Industry</label>
+      <%= f.select(:industry,[  ['Aerospace & Defense', 'Aerospace & Defense'], ['Agriculture', 'Agriculture'], ['Automotive', 'Automotive'], ['Chemicals', 'Chemicals'], ['Construction', 'Construction'], ['Consumer Goods & Services', 'Consumer Goods & Services'], ['Electric Power Industry', 'Electric Power Industry'], ['Agriculture', 'Agriculture'], ['Energy Industry', 'Energy Industry'], ['Financial Services', 'Financial Services'], ['Firearms & Explosives', 'Firearms & Explosives'], ['Food & Beverage', 'Food & Beverage'], ['Health Care', 'Health Care'], ['Housing & Real Estate', 'Housing & Real Estate'], ['Manufacturing', 'Manufacturing'], ['Mining & Drilling', 'Mining & Drilling'], ['Nuclear Power Industry', 'Nuclear Power Industry'], ['Oil and Gas Industry', 'Oil and Gas Industry'], ['Pharmaceuticals & Biotechnology', 'Pharmaceuticals & Biotechnology'], ['Printing & Publishing', 'Printing & Publishing'], ['Telecommunications & Media', 'Telecommunications & Media'], ['Transportation & Logistics', 'Transportation & Logistics']], class: 'form-control')%>
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Product Stage</label>
+      <%= f.select(:product_stage,[['Pre-MVP'], ['MVP In-Development'], ['Post MVP'], ['Post Validation & Traction']], class: "form-contol col-md-12" )%>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label">Technical Co-founder</label>
+      <%= f.select(:product_stage,[['No', 'No'], ['Yes', 'Yes']], class: "form-contol col-md-12") %>
+    </div>
+  </div>
+
+  <br/>
+
+  <div class="form-group row">
     <div class="col-md-3">
       Brief Description<br/>
       <small class="text-muted">Elevator Pitch</small>
     </div>
     <div class="col-md-9">
-      <%= f.text_area :description, class: 'form-control', placeholder: "" %>
+      <%= f.text_area :description, class: 'form-control', placeholder: "", rows: "5" %>
     </div>
   </div>
 
@@ -71,7 +85,7 @@
       <small class="text-muted">Investment Readiness</small>
     </div>
     <div class="col-md-9">
-      <%= f.text_area :readiness, class: 'form-control', placeholder: "Stage of Growth" %>
+      <%= f.text_area :readiness, class: 'form-control', placeholder: "", rows: "5" %>
     </div>
   </div>
 
@@ -81,7 +95,7 @@
       <small class="text-muted">Return Expectations</small>
     </div>
     <div class="col-md-9">
-      <%= f.text_area :growth_projections, class: 'form-control', placeholder: "" %>
+      <%= f.text_area :growth_projections, class: 'form-control', placeholder: "", rows: "5" %>
     </div>
   </div>
 
@@ -105,19 +119,19 @@
   <div class="form-group row">
     <div class="col-md-12">
       <label class="form-label">LinkedIn</label>
-      <%= f.text_area :linkedin, class: 'form-control', placeholder: "" %>
+      <%= f.text_field :linkedin, class: 'form-control', placeholder: "" %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col-md-12">
       <label class="form-label">Twitter</label>
-      <%= f.text_area :twitter, class: 'form-control', placeholder: "" %>
+      <%= f.text_field :twitter, class: 'form-control', placeholder: "" %>
     </div>
   </div>
    <div class="form-group row">
     <div class="col-md-12">
       <label class="form-label">Facebook</label>
-      <%= f.text_area :facebook, class: 'form-control', placeholder: "" %>
+      <%= f.text_field :facebook, class: 'form-control', placeholder: "" %>
     </div>
   </div>
 

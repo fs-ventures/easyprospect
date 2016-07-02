@@ -98,16 +98,16 @@
             <div class="box-typical-inner">
               <p class="line-with-icon">
                 <i class="font-icon font-icon-calend"></i>
-                Joined 8 month ago
+                Joined [timestamp]
               </p>
               <p class="line-with-icon">
                 <i class="font-icon font-icon-pin-2"></i>
-                Nairobi, Kenya<br/>
+                [location]<br/>
                 <small class="text-muted">Corporate Headquarters</small>
               </p>
               <p class="line-with-icon">
                 <i class="font-icon font-icon-users-two"></i>
-                Joel Jackson<br/> 
+                [database pull]<br/> 
                 <small class="text-muted">Founder and CEO</small>
               </p>
               <p class="line-with-icon">
@@ -136,7 +136,12 @@
                 <a class="nav-link active" href="#about" role="tab" data-toggle="tab">
                   <span class="nav-link-in">About</span>
                 </a>
-              </li><!-- 
+              </li>
+               <li class="nav-item">
+                <a class="nav-link" href="#social" role="tab" data-toggle="tab">
+                  <span class="nav-link-in">Social, Media & Press</span>
+                </a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="#financials" role="tab" data-toggle="tab">
                   <span class="nav-link-in">Financials</span>
@@ -151,7 +156,7 @@
                 <a class="nav-link" href="#dataroom" role="tab" data-toggle="tab">
                   <span class="nav-link-in">Data Room</span>
                 </a>
-              </li> -->
+              </li>
             </ul>
           </div><!--.tabs-section-nav-->
 
@@ -170,7 +175,7 @@
                 <hr/>
                 <br/>
                 
-                <h5 class="text-primary">The Problem</h5>
+                <h5 class="text-primary">What problem are you solving?</h5>
                 <textarea class="form-control text-left" rows="8">
               	</textarea>
                 
@@ -178,9 +183,18 @@
                 <hr/>
                 <br/>
                 
-                <h5 class="text-primary">Our Solution</h5>
+                <h5 class="text-primary">What is your solution?</h5>
                  <textarea class="form-control text-left" rows="8">
               	</textarea>
+
+
+                <br/>
+                <hr/>
+                <br/>
+                
+                <h5 class="text-primary">How will your company accomplish social and evnironmental impact?</h5>
+                 <textarea class="form-control text-left" rows="8">
+                </textarea>
               </section><!--.box-typical-->
 
               <br/><br/>
@@ -190,10 +204,17 @@
             <!-- about-->
             <div role="tabpanel" class="tab-pane active fade in" id="about">
               <section class="box-typical box-typical-padding">
-                <br/>
                 <%= render 'form' %>
               </section>
             </div><!--.tab-pane-->
+
+            <!-- Social-->
+            <div role="tabpanel" class="tab-pane" id="social">
+              <section class="box-typical box-typical-padding">
+                Social
+              </section>
+            </div><!--.tab-pane-->
+
 
             <!-- Financials-->
             <div role="tabpanel" class="tab-pane" id="team">
