@@ -2,75 +2,87 @@
   <% if @company.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
-
       <ul>
-      <% @company.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @company.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
   <h5 class="bold">General</h5>
+
   <div class="form-group row">
     <div class="col-md-6">
+      <label class="form-label">Company Name</label>
       <%= f.text_field :name, class: 'form-control', placeholder: "Company Name" %>
     </div>
     <div class="col-md-6">
-      <%= f.text_field :industry, class: 'form-control' , placeholder: "Industry" %>
+      <label class="form-label">Industry</label>
+      <%#= select_tag(:industry, options_for_select([['Aerospace & Defense', 1], ['Agriculture', 2], ['Automotive', 3], ['Chemicals', 4], ['Construction', 5], ['Consumer Goods & Services', 6], ['Electric Power Industry', 7], ['Agriculture', 8], ['Energy Industry', 9], ['Financial Services', 10], ['Firearms & Explosives', 11], ['Food & Beverage', 12], ['Health Care', 13], ['Housing & Real Estate', 14], ['Manufacturing', 15], ['Mining & Drilling', 16], ['Nuclear Power Industry', 17], ['Oil and Gas Industry', 18], ['Pharmaceuticals & Biotechnology', 19], ['Printing & Publishing', 20], ['Telecommunications & Media', 21], ['Transportation & Logistics', 22]]))%>
+      <%= f.select(:industry,[['Aerospace & Defense', 'Aerospace & Defense'], ['Agriculture', 'Agriculture'], ['Automotive', 'Automotive'], ['Chemicals', 'Chemicals'], ['Construction', 'Construction'], ['Consumer Goods & Services', 'Consumer Goods & Services'], ['Electric Power Industry', 'Electric Power Industry'], ['Agriculture', 'Agriculture'], ['Energy Industry', 'Energy Industry'], ['Financial Services', 'Financial Services'], ['Firearms & Explosives', 'Firearms & Explosives'], ['Food & Beverage', 'Food & Beverage'], ['Health Care', 'Health Care'], ['Housing & Real Estate', 'Housing & Real Estate'], ['Manufacturing', 'Manufacturing'], ['Mining & Drilling', 'Mining & Drilling'], ['Nuclear Power Industry', 'Nuclear Power Industry'], ['Oil and Gas Industry', 'Oil and Gas Industry'], ['Pharmaceuticals & Biotechnology', 'Pharmaceuticals & Biotechnology'], ['Printing & Publishing', 'Printing & Publishing'], ['Telecommunications & Media', 'Telecommunications & Media'], ['Transportation & Logistics', 'Transportation & Logistics']])%>
+
+      <select name="company[industry]" id="company[industry]"><option value="Aerospace &amp; Defense">Aerospace &amp; Defense</option>
+        <option value="Agriculture">Agriculture</option>
+        <option value="Automotive">Automotive</option>
+        <option value="Chemicals">Chemicals</option>
+        <option value="Construction">Construction</option>
+        <option value="Consumer Goods &amp; Services">Consumer Goods &amp; Services</option>
+        <option value="Electric Power Industry">Electric Power Industry</option>
+        <option value="Agriculture">Agriculture</option>
+        <option value="Energy Industry">Energy Industry</option>
+        <option value="Financial Services">Financial Services</option>
+        <option value="Firearms &amp; Explosives">Firearms &amp; Explosives</option>
+        <option value="Food &amp; Beverage">Food &amp; Beverage</option>
+        <option value="Health Care">Health Care</option>
+        <option value="Housing &amp; Real Estate">Housing &amp; Real Estate</option>
+        <option value="Manufacturing">Manufacturing</option>
+        <option value="Mining &amp; Drilling">Mining &amp; Drilling</option>
+        <option value="Nuclear Power Industry">Nuclear Power Industry</option>
+        <option value="Oil and Gas Industry">Oil and Gas Industry</option>
+        <option value="Pharmaceuticals &amp; Biotechnology">Pharmaceuticals &amp; Biotechnology</option>
+        <option value="Printing &amp; Publishing">Printing &amp; Publishing</option>
+        <option value="Telecommunications &amp; Media">Telecommunications &amp; Media</option>
+        <option value="Transportation &amp; Logistics">Transportation &amp; Logistics</option>
+      </select>
     </div>
   </div>
   <div class="form-group row">
     <div class="col-md-4">
-      <input type="text" class="form-control" placeholder="No. of Founders"/>
+      <label class="form-label">No. of Founders</label>
+      <input type="text" class="form-control" placeholder="1, 2, 3, 4, etc.."/>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label">No. of Employees</label>
+      <input type="text" class="form-control" placeholder="1, 2, 3, 4, etc.."/>
     </div>
     <div class="col-md-4">
-      <input type="text" class="form-control" placeholder="Geographic Focus"/>
+      <label class="form-label">Geographic Area</label>
+      <%= select_tag(:industry, options_for_select([['Sub-Saharan Africa', 1], ['East Asia & Pacific', 2], ['Europe, Middle East, & North Africa', 3], ['Latin America & the Caribbean', 4], ['South Asia', 5], ['Global', 6]]), class: "form-contol col-md-12" )%>
     </div>
     <div class="col-md-4">
-      <input type="text" class="form-control" placeholder="Product Stage"/>
+      <%= select_tag(:industry, options_for_select([['Pre-MVP', 1], ['MVP In-Development', 2], ['Post MVP', 3], ['Post Validation & Traction', 4], ['South Asia', 5], ['Global', 6]]), class: "form-contol col-md-12" )%>
     </div>
   </div>
   <div class="form-group">
+    <label class="form-label">Company Website</label>
+    <input type="text" class="form-control" placeholder="Website"/>
+  </div>
+  <div class="form-group">
+    <label class="form-label">Demo Website</label>
     <input type="text" class="form-control" placeholder="Website"/>
   </div>
   <div class="form-group row">
-    <div class="col-md-4">
+    <div class="col-md-5">
+      <label class="form-label">Country of Incorporation</label>
       <input type="text" class="form-control" placeholder="Place of Incorporation"/>
     </div>
-    <div class="col-md-3">
-      <input type="text" class="form-control" placeholder="No. of Employees"/>
-    </div>
   </div>
 
   <hr/>  
 
-  <h5 class="bold">Social Profiles</h5>
-  <div class="form-group row">
-    <div class="col-md-12">
-      <input type="text" class="form-control" placeholder="AngelList Profile"/>
-    </div>
-  </div>
-  <div class="form-group row">
-    <div class="col-md-12">
-      <input type="text" class="form-control" placeholder="Linkedin Profile"/>
-    </div>
-  </div>
-  <div class="form-group row">
-    <div class="col-md-12">
-      <input type="text" class="form-control" placeholder="Twitter Profile"/>
-    </div>
-  </div>
-   <div class="form-group row">
-    <div class="col-md-12">
-      <input type="text" class="form-control" placeholder="Facebook Profile"/>
-    </div>
-  </div>
 
-  <hr/>  
-
-  <h5 class="bold">Company Overview</h5>
-  
+  <h4 class="bold">Company Overview</h4>
 
   <div class="form-group row">
     <div class="col-md-3">
@@ -78,21 +90,17 @@
       <small class="text-muted">Elevator Pitch</small>
     </div>
     <div class="col-md-9">
-      <textarea rows="4" class="form-control" placeholder="Elevator Pitch">
-        
-      </textarea>
+      <textarea rows="4" class="form-control" placeholder="Elevator Pitch"></textarea>
     </div>
   </div>
 
   <div class="form-group row">
     <div class="col-md-3">
       Stage of Growth
-      <small class="text-muted">Investment Status</small>
+      <small class="text-muted">Investment Readiness</small>
     </div>
     <div class="col-md-9">
-      <textarea rows="4" class="form-control" placeholder="Elevator Pitch">
-        
-    </textarea>
+      <textarea rows="4" class="form-control" placeholder="Elevator Pitch"></textarea>
     </div>
   </div>
 
@@ -102,12 +110,13 @@
       <small class="text-muted">Return Expectations</small>
     </div>
     <div class="col-md-9">
-      <textarea rows="4" class="form-control" placeholder="">
-      </textarea>
+      <textarea rows="4" class="form-control" placeholder=""></textarea>
     </div>
   </div>
 
-  <br/>
+  <hr/>
+
+  <h4 class="bold">Pitch Deck & Financials</h4>
 
   <div class="form-group row">
     <div class="col-md-9">
@@ -118,21 +127,59 @@
 
   <hr>
 
+  <h4 class="bold">Social Profiles & Media</h4>
+
+  <br/>
+  <h5 class="text-primary">Social Profiles</h5>
+  <div class="form-group row">
+    <div class="col-md-12">
+      <label class="form-label">LinkedIn</label>
+      <input type="text" class="form-control" placeholder="http://LinkedIn/"/>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-md-12">
+      <label class="form-label">Twitter</label>
+      <input type="text" class="form-control" placeholder="http://Twitter/"/>
+    </div>
+  </div>
+   <div class="form-group row">
+    <div class="col-md-12">
+      <label class="form-label">Facebook</label>
+      <input type="text" class="form-control" placeholder="http://facebook/"/>
+    </div>
+  </div>
+
+  <br/>
+  <h5 class="text-primary">Media</h5>
+  <div class="form-group row">
+    <div class="col-md-12">
+      <label class="form-label">Media URL</label>
+      <input type="text" class="form-control" placeholder="Copy and Paste URL"/>
+    </div>
+  </div>
+
+  <hr/>  
+
   <h5 class="bold">Raising Capital</h5>
   <div class="form-group row">
     <div class="col-md-6">
+      <label class="form-label">Amount</label>
       <input type="text" class="form-control" placeholder="Amount"/>
     </div>
     <div class="col-md-6">
+      <label class="form-label">Financial Product</label>
       <input type="text" class="form-control" placeholder="Type"/>
     </div>
   </div>
 
   <div class="form-group row">
     <div class="col-md-6">
+      <label class="form-label">Financial Product</label>
       <input type="text" class="form-control" placeholder="Tax Structure"/>
     </div>
     <div class="col-md-6">
+      <label class="form-label">Amount Raised to Date</label>
       <input type="text" class="form-control" placeholder="Amount Raised to date"/>
     </div>
   </div>
