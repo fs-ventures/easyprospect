@@ -25,6 +25,11 @@
               
               <div class="form-group row no-padding">
                 <div class="col-md-12 col-sm-12">
+
+                  <%= select_tag(:type, options_for_select([['Investor'], ['Advisor'], ['Entreprenuer'], ['Admin']]), class: "form-contol col-md-12" )%>
+                  <br>
+                  <br>
+
                   <div class="checkbox-detailed block margin-right-0">
                     <input type="radio" name="detailed" id="check-det-1" checked/>
                     <label for="check-det-1" class="width-100">
@@ -38,6 +43,7 @@
                     </span>
                     </label>
                   </div>
+
                   <div class="checkbox-detailed block margin-right-0">
                     <input type="radio" name="detailed" id="check-det-2"/>
                     <label for="check-det-2" class="width-100">
@@ -51,6 +57,7 @@
                     </span>
                     </label>
                   </div>
+
                    <div class="checkbox-detailed block no-margin">
                     <input type="radio" name="detailed" id="check-det-3"/>
                     <label for="check-det-3" class="width-100">
