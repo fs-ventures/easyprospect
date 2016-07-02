@@ -89,7 +89,7 @@
           </section>
 
             <section class="box-typical">
-            <header class="box-typical-header-sm bordered">Info</header>
+            <header class="box-typical-header-sm bordered">Company Snapshot</header>
             <div class="box-typical-inner">
               <p class="line-with-icon">
                 <i class="font-icon font-icon-calend"></i>
@@ -170,28 +170,17 @@
                 <br/>
                 <h4 class="text-primary">Our Vision</h4>
 
-                <p>Mobius Motors designs, manufactures and sells durable, affordable vehicles for Africa's mass market. We are reimagining the car; designing our vehicles around common road terrain, transport usage and consumer income profiles across the region.</p>
-                
-                <p>We are not just building vehicles more suited to local demand, but transport platforms that empower local entrepreneurs to run profitable transportation businesses with Mobius vehicles to end-users in their communities. The range of businesses is vast, from public transport, to mobile medical care, to goods delivery - transforming Africa's transport network.</p>
+               <%= @company.vision %>
 
                 <br/>
                 <h4 class="text-primary">The Problem</h4>
 
-                <p>The majority of roads in rural and peri-urban areas of sub-saharan Africa are degraded. Roads are often cracked and riddled with potholes. Rural roads in particular are invariably uneven, sandy/rocky tracks; making transportation difficult and ultimately restricting mobility.</p>
-                
-                <p>The most common vehicles across regions like East Africa are imported from more developed countries such as Japan, UAE and India. These vehicles are designed for areas with good road infrastructure - they are not built for an African environment. High import duties also make these vehicles relatively expensive.</p>
-
-                <p>Beyond high purchase prices, running a car in countries like Kenya is also expensive. High maintenance costs as a result of bad roads and inappropriate vehicles have continued to push the cost of owning a car up, locking out entry-level buyers, particularly entrepreneurs who require cost-effective vehicles in order to successfully operate their businesses.</p>
+                <%= @company.problem %>
 
                 <br/>
                 <h4 class="text-primary">Our Solution</h4>
 
-                <p>To serve the African mass market, we have built a car around the needs of local consumers.</p>
-                
-                <p>Our vehicles have the key functionality and durability of an off-road car, fit for travelling and carrying goods for long distances on bumpy dirt roads. The price is similar to a seven year old sedan vehicle, which is not designed to operate on degraded terrain reliably, nor carry the heavier loads common among consumers in these areas.</p>
-                
-                <p>Mobius aims to empower transport entrepreneurs across Africa not just with more appropriate vehicles, but with the financing and business advice needed to operate a sustainable transport business. We are building a platform for mobility.</p>
-
+                <%= @company.solution %>
 
               </section>
             </div><!--.tab-pane-->

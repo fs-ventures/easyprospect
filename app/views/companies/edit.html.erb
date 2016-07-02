@@ -164,36 +164,40 @@
             <div role="tabpanel" class="tab-pane" id="activity">
               <section class="box-typical box-typical-padding p-b">
               	<br/>
+
+                <%= form_for(@company) do |f| %>
               	
-                <h4 class="">Our Vision</h4>
-                <h5 class="text-primary">Tell us about your company</h5>
-              	<textarea class="form-control text-left" rows="8">
-              	</textarea>
-                
-                <br/>
-                <hr/>
-                <br/>
-                
-                <h5 class="text-primary">What problem are you solving?</h5>
-                <textarea class="form-control text-left" rows="8">
-              	</textarea>
-                
-                <br/>
-                <hr/>
-                <br/>
-                
-                <h5 class="text-primary">What is your solution?</h5>
-                 <textarea class="form-control text-left" rows="8">
-              	</textarea>
+                  <h4 class="">Our Vision</h4>
+                  <h5 class="text-primary">Tell us about your company</h5>
+                	<%= f.text_area :vision, class: 'form-control', placeholder: "" %>
+                  
+                  <br/>
+                  <hr/>
+                  <br/>
+                  
+                  <h5 class="text-primary">What problem are you solving?</h5>
+                  <%= f.text_area :problem, class: 'form-control', placeholder: "" %>
+                  
+                  <br/>
+                  <hr/>
+                  <br/>
+                  
+                  <h5 class="text-primary">What is your solution?</h5>
+                  <%= f.text_area :solution, class: 'form-control', placeholder: "" %>
 
 
-                <br/>
-                <hr/>
-                <br/>
-                
-                <h5 class="text-primary">How will your company accomplish social and evnironmental impact?</h5>
-                 <textarea class="form-control text-left" rows="8">
-                </textarea>
+                  <br/>
+                  <hr/>
+                  <br/>
+                  
+                  <h5 class="text-primary">How will your company accomplish social and evnironmental impact?</h5>
+                  <%= f.text_area :name, class: 'form-control', placeholder: "" %>
+
+                  <hr/>
+
+                  <%= f.submit "Submit", class: "btn btn-rounded btn-primary sign-up " %>
+
+                <% end %>
               </section><!--.box-typical-->
 
               <br/><br/>
