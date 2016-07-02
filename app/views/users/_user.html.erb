@@ -1,13 +1,41 @@
+<%= link_to user do %>
+	<div class="col-md-3">
+	  <section class="widget widget-user">
+	    <div class="widget-user-bg" style="background-image: url('http://vestedworld.com/app/uploads/2016/03/3-1600x870.jpg')"></div>
+	    <div class="widget-user-photo">
+	      <%= image_tag("photo-92-2.jpg")%>
+	    </div>
+	    <div class="widget-user-name">
+	      <%= user.name %>, <%= link_to user.email, user %>
+	      <i class="font-icon font-icon-award"></i>
+	    </div>
+	    <p class="text-muted capitalize"><%= user.role %></p>
+	    <p>
+	      <%= link_to "#{user.name}", class: "btn btn-primary" do %>
+	      	Connect LinkedIn
+	      <% end %>
+	    </p>
+	    <ul class="profile-links-list">
+	      <li class="divider"></li>
+	      <li>
+	        <%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button-xs') unless user == current_user %>
+	        <%= form_for(user) do |f| %>
+				    <%= f.select(:role, User.roles.keys.map {|role| [role.titleize,role]}) %>
+				    <%= f.submit 'Change Role', :class => 'button-xs' %>
+				  <% end %>
+	      </li>
+	    </ul>
+	  </section><!--.box-typical-->
+	</div>
+<% end %>
+
 
 <td>
-  <%= link_to user.email, user %>, <%= user.role %>
+  
 </td>
 <td>
-  <%= form_for(user) do |f| %>
-    <%= f.select(:role, User.roles.keys.map {|role| [role.titleize,role]}) %>
-    <%= f.submit 'Change Role', :class => 'button-xs' %>
-  <% end %>
+  
 </td>
 <td>
-  <%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button-xs') unless user == current_user %>
+  
 </td>
