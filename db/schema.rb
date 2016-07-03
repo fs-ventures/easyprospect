@@ -25,9 +25,8 @@ ActiveRecord::Schema.define(version: 20160702221522) do
     t.integer  "raised"
     t.string   "tag"
     t.string   "industry"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.integer  "amount_raised"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "no_of_employees"
     t.string   "no_of_founders"
     t.string   "fundraising_amount"
@@ -39,7 +38,6 @@ ActiveRecord::Schema.define(version: 20160702221522) do
     t.string   "twitter"
     t.string   "linkedin"
     t.string   "angellist"
-    t.string   "country_of_incorporation"
     t.string   "growth_projections"
     t.string   "geography"
     t.string   "product_stage"
