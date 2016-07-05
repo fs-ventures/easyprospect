@@ -13,4 +13,8 @@ class CreateCompanies < ActiveRecord::Migration
       t.timestamps null: false
     end
   end
+
+  if column_exists? :companies, :country_of_incorporation
+    remove_column :companies, :country_of_incorporation
+  end
 end
