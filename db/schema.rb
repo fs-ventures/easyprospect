@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20160702204716) do
     t.string   "industry"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.integer  "amount_raised"
     t.string   "no_of_employees"
     t.string   "no_of_founders"
     t.string   "fundraising_amount"
