@@ -15,33 +15,32 @@
     </header><!--.page-content-header-->
 
     <div class="container">
-
-       <% @users.each do |user| %>
-          <div class="col-md-3">
-            <section class="widget widget-user">
-              <div class="widget-user-bg" style="background-image: url('http://vestedworld.com/app/uploads/2016/03/3-1600x870.jpg')"></div>
-              <div class="widget-user-photo">
-                <%= image_tag("photo-92-2.jpg")%>
-              </div>
-              <div class="widget-user-name">
-                Seyi Fabode
-                <i class="font-icon font-icon-award"></i>
-              </div>
-              <p class="text-muted">Johannesburg, South Africa</p>
-              <p>
-                <a href="#" class="btn btn-primary">Connect LinkedIn</a>
-              </p>
-              <ul class="profile-links-list">
-                
-                <li class="divider"></li>
-                <li>
-                  <a href="search-investments.html" class="text-primary">I don't have LinkedIn, skip this <i class="fa fa-long-arrow-right"></i></a>
-                </li>
-              </ul>
-            </section><!--.box-typical-->
-          </div>
-          <%= render user %>
-        <% end %>
+      <% @users.each do |user| %>
+        <div class="col-md-3">
+          <section class="widget widget-user">
+            <div class="widget-user-bg" style="background-image: url('http://vestedworld.com/app/uploads/2016/03/3-1600x870.jpg')"></div>
+            <div class="widget-user-photo">
+              <%= image_tag("photo-92-2.jpg")%>
+            </div>
+            <div class="widget-user-name">
+              Seyi Fabode
+              <i class="font-icon font-icon-award"></i>
+            </div>
+            <p class="text-muted">Johannesburg, South Africa</p>
+            <p>
+              <a href="#" class="btn btn-primary">Connect LinkedIn</a>
+            </p>
+            <ul class="profile-links-list">
+              
+              <li class="divider"></li>
+              <li>
+                <a href="search-investments.html" class="text-primary">I don't have LinkedIn, skip this <i class="fa fa-long-arrow-right"></i></a>
+              </li>
+            </ul>
+          </section><!--.box-typical-->
+        </div>
+        <%= render user %>
+      <% end %>
 
 
 
